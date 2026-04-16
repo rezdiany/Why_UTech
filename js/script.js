@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadGames() {
         try {
             const cacheBuster = new Date().getTime();
-            const pcUrl = `/json/steamrip.json?t=${cacheBuster}`;
-            const ps2Url = `/json/ps2.json?t=${cacheBuster}`;
+            const pcUrl = `json/steamrip.json?t=${cacheBuster}`;
+            const ps2Url = `json/ps2.json?t=${cacheBuster}`;
 
             const [pcRes, ps2Res] = await Promise.all([
                 fetch(pcUrl, { cache: 'no-store' }),
